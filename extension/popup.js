@@ -2,7 +2,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   const button = document.getElementById('popup-click')
   button.addEventListener('click', function(){
-    addIngredientsFunc()
+    chrome.tabs.executeScript(null, {
+      file: "getIngredients.js"
+    });
   })
 })
 

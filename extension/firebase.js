@@ -33,13 +33,13 @@ if(msg.command == 'checkAuth'){
     }
 }
 if (msg.command === 'AddAllIngredients') {
-    var uid = firebase.auth().currentUser
+    var uid = firebase.auth().currentUser.uid
     alert(uid)
     var ingredients = msg.ingredients
     var title = msg.title
-
+    
     ingredients.forEach(item => {
-        firebase.database().ref(uid).set({
+        firebase.database().ref('HOnk4oxHINTKxNJg0iHIRGEVxoI2').push({
             [item]: title
         })
     })
