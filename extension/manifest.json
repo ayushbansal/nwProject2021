@@ -1,0 +1,23 @@
+{
+    "name": "Helper",
+    "description": "Help your neighbour in these difficult times by offering to get groceries or other essential items for immunocompromised individuals.",
+    "version": "0.1.0",
+    "manifest_version": 2,
+    "background":{
+      "page": "background.html",
+      "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "Add ingredients to list"
+    },
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "http://*/*",
+        "https://*/*",
+        "storage",
+        "identity"
+    ],
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+  }

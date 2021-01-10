@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+.body,html {
+    background: rgb(204, 218, 191);
+}
+
+.header {
+    padding: 5px 50px;
+    text-align: center;
+    background-color: #649568;
+    color: white;
+    font-size: 25px;
+  }
+
+.userArea {
+    font-family: 'Sourc Sans Pro', sans-serif;
+    font-size: 20px;
+}
+
+.userArea * {
+    box-sizing: border-box;
+    line-height: 1.5; 
+}
+
+.title {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.loginArea, .loggedInArea{
+    display: flex;
+    flex-direction: column;
+}
+
+.loginArea > * {
+    align-self: flex-start;
+}
+
+.loggedInArea > * {
+    align-self: flex-start;
+}
+
+.label {
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.input {
+    outline: none;
+    border: 1px solid #649568;
+    border-radius: 4px;
+    background: #f9f9f9;
+    transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
+
+.input:focus {
+    background: #ffffff;
+}
+
+.input::placeholder {
+    color: #bbbbbb;
+}
+
+.login-btn-auth, .item-add, .logout-btn-auth, .add-ingredients {
+    font-family: 'Sourc Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 7px 13px;
+    margin: 10px 0px;
+
+    color: #ffffff;
+    background: #649568;
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+    outline: none;
+}
+
+.login-btn-auth:active, .item-add:active, .logout-btn-auth:active, .add-ingredients:active {
+    background: #1e7526
+}
