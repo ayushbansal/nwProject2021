@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   button.addEventListener('click', function(){
     chrome.tabs.executeScript(null, {
       file: "getIngredients.js"
-    });
+    })
   })
 })
 
@@ -19,15 +19,6 @@ chrome.runtime.sendMessage({command: "checkAuth"}, (response) => {
     // Show this html if not signed in
     document.querySelector('.loginArea').style.display='block'
   }
-})
-
-// Listener for login button click
-document.querySelector('.login-btn-auth').addEventListener('click', function(){
-  loginFunc()
-})
-// Listener for logout button press
-document.querySelector('.logout-btn-auth').addEventListener('click', function(){
-  logoutFunc()
 })
 
 // Run this when login button pressed
@@ -59,3 +50,25 @@ var logoutFunc = function(){
     console.log(response)
   })
 }
+
+var addItemFunc = function() {
+  var item = document.querySelector('.loggedInArea input[type="text"]').value
+
+  chrome.runtime.sendMessage({command: "addItem", item: item}, (response) => {
+    console.log(response.status)
+  })
+}
+
+// Listener for login button click
+document.querySelector('.login-btn-auth').addEventListener('click', function(){
+  loginFunc()
+})
+// Listener for logout button press
+document.querySelector('.logout-btn-auth').addEventListener('click', function(){
+  logoutFunc()
+})
+// Listener for adding individual ingredients
+document.querySelector('.item-add').addEventListener('click', function() {
+  addItemFunc()
+})
+

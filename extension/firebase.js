@@ -34,17 +34,26 @@ if(msg.command == 'checkAuth'){
 }
 if (msg.command === 'AddAllIngredients') {
     var uid = firebase.auth().currentUser.uid
-    alert(uid)
+
     var ingredients = msg.ingredients
     var title = msg.title
     
     ingredients.forEach(item => {
-        firebase.database().ref('HOnk4oxHINTKxNJg0iHIRGEVxoI2').push({
+        firebase.database().ref(uid).push({
             [item]: title
         })
     })
-
+    alert("Successfully saved recipe ingredients!")
     response({type: "AddAllIngredients", status: "success"})
+}
+if (msg.command === 'addItem') {
+    var uid = firebase.auth().currentUser.uid
+
+    firebase.database().ref(uid).push({
+        [msg.item]: ""
+    })
+    alert("Successfully added item!")
+    response({status: "success"})
 }
 if(msg.command == 'loginUser'){
     console.log(msg.data)

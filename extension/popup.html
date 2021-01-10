@@ -4,23 +4,21 @@
   <title id="A7E596">Firebase Auth</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="form/form.css">
-  <style>
-      body {
-          padding: 25px;
-        }
-        </style>
-</head>
-
-<body>
-    <div class="header">
+  <header>
+    <div class="cartner">
         <h1>Cartner</h1>
         <p>Stay Safe.</p>
     </div>
+  </header>
+</head>
+
+<body>
+
   <div class="userArea">
     <div class="loginArea" style="display:none;">
         <h1 class="title">Sign in</h1>
         <label class="label">Enter email:</label>
-        <input class="input" type="email" placeholder="johndoe@samplmail.com">
+        <input class="input" type="email" placeholder="johndoe@samplmail.com"><br>
         <label class="label">Enter password:</label>
         <input class="input" type="password" placeholder="******">
         <div style="text-align:center;">
@@ -28,14 +26,12 @@
         </div>
     </div>
     <div class="loggedInArea" style="display:none;">
-        <h1 class="title">Welcome!</h1>
+        <h1 class="title">Howdy, Cartner &#129312;</h1>
+        <h1 class="title">What would you like today?</h1>
         <input class="input" type="text" placeholder="Add individual items to list..." />
-        <div style="text-align:center;">
-            <button class="item-add" type="submit">Add Item to List</button> <br/>
-            <button class="add-ingredients" id="popup-click">Add All Ingredients</button>
-        </div>
+          <button class="item-add" type="button">Add Item to List</button> <br/>
+          <button class="add-ingredients" id="popup-click">Add All Ingredients</button>
         <script src="./popup.js"></script>
-      <p>Logged in user: <span></span></p>
       <button class="logout-btn-auth" type="button">Logout</button>
     </div>
   </div>

@@ -27,5 +27,5 @@ var ingredients = findIngredientsFunc(jsonld, 'recipeIngredient')
 var str = ingredients[1]
 ////////////////////////////////////////
 chrome.runtime.sendMessage({command: "AddAllIngredients", title: title, ingredients: str}, response => {
-  alert(response.status)
+  console.log(response.status)
 })
