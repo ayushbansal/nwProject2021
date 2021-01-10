@@ -34,6 +34,11 @@ header {
     font-weight: 600;
 }
 
+.subtitle {
+    font-size: 20px;
+    font-weight: 600;    
+}
+
 .loginArea, .loggedInArea{
     display: flex;
     flex-direction: column;
@@ -67,14 +72,14 @@ header {
 .login-btn-auth, .item-add, .logout-btn-auth, .add-ingredients {
     font-family: 'Sourc Sans Pro', sans-serif;
     font-weight: 600;
-    font-size: 1em;
+    font-size: 14px;
     padding: 7px 13px;
     margin: 10px 0px;
 
     color: #ffffff;
     background: #649568;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
 
     cursor: pointer;
     outline: none;
